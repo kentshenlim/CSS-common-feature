@@ -1,0 +1,41 @@
+:root {
+    color: #eeeeee;
+    font-size: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #000099;
+    height: 3rem;
+    display: flex;
+}
+
+ul.link-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+ul.link-list > li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+ul.link-list a {
+    text-decoration: none;
+    color: inherit;
+    background-color: #0000cc;
+    padding: .5em 1em;
+}
+
+ul.link-list a:hover {
+    display: inline-block;
+    border: solid #0000ee 2px;
+    padding: .7em 1.2em;
+}
