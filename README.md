@@ -9,12 +9,12 @@ for future reference.
 Navigation panel with multiple links. The links will enlarge when hover over the
 link. Does not use transform.  
 
-2. ## Vertical centering of a line of text, 02-textVerticalCenter  
-Vertical centering works for only one line of text but not more.  
+2. <ins>Vertical centering of a line of text, 02-textVerticalCenter</ins>  
+    Vertical centering works for only one line of text but not more.  
 
-3. ## Dynamic font-size with a minimum, 03-dynamicFontSize  
+3. <ins>Dynamic font-size with a minimum, 03-dynamicFontSize</ins>  
 Font-size that increases with viewport width, but with an optimal minimum of
 12px.  
 
-4. ## Manual aspect ratio, 04-manualAspectRatio  
+4. <ins>Manual aspect ratio, 04-manualAspectRatio</ins>  
 Use calc() to implement manual aspect ratio.  
