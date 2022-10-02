@@ -18,3 +18,7 @@ Font-size that increases with viewport width, but with an optimal minimum of
 
 4. <ins>Manual aspect ratio, 04-manualAspectRatio</ins>  
 Use calc() to implement manual aspect ratio.  
+
+5. <ins>Text-overflow ellipsis, 05-ellipsisTextOverflow</ins>  
+One-line sentence, overflow replaced by ellipsis. When hovered expand to show
+the text.  
