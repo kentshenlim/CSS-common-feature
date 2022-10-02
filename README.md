@@ -26,3 +26,6 @@ the text.
 6. <ins>Styling section that is being view, 06-stylingTargetSection</ins>  
 Use :target to style section that is "being viewed", i.e. its id forms fragment
 of current URL.  
+
+7. <ins>Checkbox that moves inwards when checked, 07-movingCheckbox</ins>  
+When ticked, the checkbox will move closer to LH edge of screen.  
