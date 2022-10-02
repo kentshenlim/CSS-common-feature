@@ -22,3 +22,7 @@ Use calc() to implement manual aspect ratio.
 5. <ins>Text-overflow ellipsis, 05-ellipsisTextOverflow</ins>  
 One-line sentence, overflow replaced by ellipsis. When hovered expand to show
 the text.  
+
+6. <ins>Styling section that is being view, 06-stylingTargetSection</ins>  
+Use :target to style section that is "being viewed", i.e. its id forms fragment
+of current URL.  
