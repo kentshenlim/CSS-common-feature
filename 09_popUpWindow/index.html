@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Window</title>
+    <style>
+        :root {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 1rem;
+            border-radius: 1rem;
+            border: solid hsl(0, 3%, 60%) 3px;
+        }
+
+        section:first-child {
+            /* Centering, both horizontal and vertical */
+            width: 20rem;
+            position: absolute;
+            top: 50%;
+            left: 50%; /* Of screen, the bottom-left corner */
+            transform: translate(-50%, -50%); /* Of container, so now is perfect center */
+        }
+
+        button {
+            background-color: #f5f5dc;
+            border-radius: .5rem;
+        }
+
+        button:hover {
+            background-color: #575736;
+        }
+
+        section:nth-of-type(2) {
+            background-color: rgb(226, 90, 48);
+            border-color: #f5f5dc;
+            width: 30rem;
+            position: fixed; /* Better than absolute, remains if scroll down */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0); /* Scale 0 not shown by default */
+            z-index: 10; /* High index, drawn above everything else */
+            transition: 250ms ease-in-out;
+            transform-origin: bottom left;
+        }
+
+        section:nth-of-type(2).active {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        section:nth-of-type(2) header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: solid rgb(87, 84, 84) 3px;
+        }
+
+        button#close {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            font-size: 2rem;
+            color: red;
+            cursor: pointer;
+        }
+
+        .overlay {
+           position: fixed;
+           opacity: 1; 
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0; /* These four give full-screen overlay */
+           background-color: rgba(0, 0, 0, 0.5);
+           opacity: 0;
+           pointer-events: none; /* Allow clicking of inner elements by default (not shown up) */
+        }
+
+        .overlay.active {
+            pointer-events: all; /* Block clicking events of inner elements */
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Pop-up Window</h1>
+        <p>Here are some random texts. Nobody knows why there are here. Rumour
+        says if you click the button below a pop-up window will be generated.
+        </p>
+        <button id="generate">Push me</button>
+    </section>
+
+    <button id="checker">Push me during pop-up</button>
+
+    <section class="pop-up">
+        <header>
+            <h1>Error generating pop-up window!</h1>
+            <button id="close">&times;</button>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+        voluptas, atque ratione eveniet illum exercitationem provident quos
+        recusandae assumenda! Aperiam modi fuga tempora, iusto et nobis
+        perspiciatis! Hic ab nisi numquam tenetur sapiente aperiam eligendi
+        itaque fugit sed corrupti, ratione consectetur animi minima impedit
+        assumenda, veniam libero officia eum! Expedita suscipit nesciunt
+        consequatur voluptatibus aperiam, dolore fugiat error odio eum quaerat,
+        inventore sed corrupti? Sit eaque nostrum pariatur ab dignissimos,
+        adipisci modi a repudiandae assumenda veritatis eligendi, dolores
+        sapiente suscipit.</p>
+    </section>
+    <div class="overlay"></div> 
+
+    <script>
+        const openBtn = document.querySelector("#generate");
+        const closeBtn = document.querySelector("#close");
+        const testBtn = document.querySelector("#checker");
+        const popUpWindow = document.querySelector("section.pop-up");
+        const overlay = document.querySelector(".overlay");
+        
+        openBtn.addEventListener("click", () => {
+            popUpWindow.classList.add("active");
+            overlay.classList.add("active");
+        })
+
+        closeBtn.addEventListener("click", () => {
+            popUpWindow.classList.remove("active");
+            overlay.classList.remove("active");
+        })
+
+        testBtn.addEventListener("click", () => {
+            console.log("This button is active!");
+        })
+    </script>
+</body>
+</html>

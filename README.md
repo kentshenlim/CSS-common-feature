@@ -34,3 +34,7 @@ When ticked, the checkbox will move closer to LH edge of screen.
 Make an element becomes list item. A number will be inserted in front of every
 instances of the element, making the element instances appear to be list items
 of an ordered list.  
+
+9. <ins>Pop-up window, 09_popUpWindow</ins>  
+Stop background clicking when pop-up window is being shown. Also showcase center
+both vertically and horizontally of an element in its parent.  
