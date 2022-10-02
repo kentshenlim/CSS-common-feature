@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Numbering of an Element</title>
+    <style>
+        body {
+            width: 50vw;
+            margin: 0 auto;
+        }
+
+        h3 {
+            display: list-item;
+            counter-increment: h3;
+            /* list-style-position: inside; */ /* Declare this if close to edge*/
+        }
+
+        h3::marker {
+            display: list-item;
+            content: "#" counter(h3) " ";
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Introduction to CSS flexbox</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam at
+    unde consectetur libero atque sapiente eveniet quis voluptatum voluptatem
+    molestias ut illo doloremque assumenda nam nesciunt, illum, amet officia
+    quia accusantium esse hic? Laboriosam quia, exercitationem sed distinctio
+    veniam necessitatibus sequi aliquid, deleniti eveniet facere itaque magni
+    illo, accusantium cum.</p>
+    
+    <h3>Introduction to CSS grid</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi libero
+    quaerat veritatis, accusantium non omnis delectus. Adipisci mollitia, nulla
+    nesciunt eveniet nemo cum architecto tempora inventore modi quam. Itaque
+    neque quis nobis aspernatur optio? Quam incidunt accusantium at quod
+    rem!</p>
+    
+    <h3>Introduction to CSS function</h3>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae
+    quidem voluptatum dolor adipisci enim distinctio. Facilis quaerat dolore
+    beatae est hic? Quisquam ad reprehenderit quas quasi omnis eveniet
+    praesentium molestias.</p>
+</body>
+</html>
