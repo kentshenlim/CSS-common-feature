@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Required Field</title>
+    <style>
+        form ul {
+            list-style: none;
+        }
+
+        form li+li {
+            margin-top: 2rem;
+        }
+
+        label {
+            display: inline-block;
+            width: 8rem;
+            text-align: right;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <ul>
+            <li>
+                <label for="first-name">First name<strong><span
+                aria-label="required">*</span></strong></label> 
+                <input type="text" id="first-name" name="firstName"
+                placeholder="John">
+            </li>
+            <li>
+                <label for="last-name">Last name<strong><span
+                aria-label="required">*</span></strong></label> 
+                <input type="text" id="last-name" name="lastName"
+                placeholder="Cena">
+            </li>
+            <li>
+                <label for="age">Age</label>
+                <input type="tel" id="age" name="age" placeholder="18">
+            </li>
+        </ul>
+    </form>
+    
+</body>
+</html>
