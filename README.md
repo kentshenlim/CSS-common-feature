@@ -38,3 +38,6 @@ of an ordered list.
 9. <ins>Pop-up window, 09_popUpWindow</ins>  
 Stop background clicking when pop-up window is being shown. Also showcase center
 both vertically and horizontally of an element in its parent.  
+
+10. <ins>Dynamic Webpage, 10_dynamicWebpage</ins>  
+Dynamic element width, font-size, and padding.  
