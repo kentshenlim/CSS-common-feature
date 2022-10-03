@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow</title>
+    <style>
+        :root {
+            --BASE-HUE: 140;
+            --SATURATION: 100%;
+            --LIGHTNESS: 70%;
+            --NUMBER: 7; /* Number of colors you want to pick*/
+            --ROTATION: calc(360/var(--NUMBER));
+        }
+
+        div {
+            width: 10vw;
+            height: 10vw;
+            display: inline-block;
+        }
+
+        div[class|="color"] {
+            background-color: hsl(var(--HUE), var(--SATURATION), var(--LIGHTNESS)); /* Later define the HUE elementwise*/
+        }
+
+        .color-1 {
+           --HUE: calc(var(--BASE-HUE) + var(--ROTATION) * 0); 
+        }
+
+        .color-2 {
+            --HUE: calc(var(--BASE-HUE) + var(--ROTATION) * 1);
+        }
+
+        .color-3 {
+            --HUE: calc(var(--BASE-HUE) + var(--ROTATION) * 2);
+        }
+
+        .color-4 {
+            --HUE: calc(var(--BASE-HUE) + var(--ROTATION) * 3);
+        }
+
+        .color-5 {
+            --HUE: calc(var(--BASE-HUE) + var(--ROTATION) * 4);
+        }
+
+        .color-6 {
+            --HUE: calc(var(--BASE-HUE) + var(--ROTATION) * 5);
+        }
+
+        .color-7 {
+            --HUE: calc(var(--BASE-HUE) + var(--ROTATION) * 6);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="color-1"></div>
+    <div class="color-2"></div>
+    <div class="color-3"></div>
+    <div class="color-4"></div>
+    <div class="color-5"></div>
+    <div class="color-6"></div>
+    <div class="color-7"></div>
+</body>
+</html>

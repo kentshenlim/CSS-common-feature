@@ -41,3 +41,6 @@ both vertically and horizontally of an element in its parent.
 
 10. <ins>Dynamic Webpage, 10_dynamicWebpage</ins>  
 Dynamic element width, font-size, and padding.  
+
+11. <ins>calc() to pick color conveniently, 11_rainbow</ins>  
+Use calc() to pick a given number of colors evenly spaced in the color wheel.  
