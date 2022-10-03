@@ -52,5 +52,6 @@ applying default theme using media query.
 13. <ins>Form required field, 13_requiredFIeld</ins>  
 Accessibility for required field in form, marked with *.  
 
-14. <ins>Checkbox that scales with font-size, 14_scaleCheckbox</ins>  
-When font-size increases, checkbox size will also increase.  
+14. <ins>Checkbox that scales with font-size, 14_themeAbleCheckbox</ins>  
+When font-size increases, checkbox size will also increase. The color is also
+theme-able.  

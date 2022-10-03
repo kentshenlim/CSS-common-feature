@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme-able Checkbox</title>
+    <style>
+        /* Scalable */
+        form ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 3rem; /* Change this to observe the effect on size of checkbox */
+            color: red; /* Change this to observe the effect on checkbox and checked state */
+        }
+
+        form li {
+            display: grid;
+            grid-template-columns: 10rem auto; /* 10rem will set the upper limit of side length of checkbox */
+            line-height: 3; /* Vertical spacing between list items */
+            column-gap: 1rem; /* Spacing between checkbox and label */
+        }
+        form li * {
+            border: solid red 3px;
+        }
+        /* Color theme-able */
+        input[type="checkbox"] {
+            appearance: none; /* Clear default */
+            background-color: #ffffff;
+            margin: 0;
+            font: inherit;
+            color: currentColor; /* Keyword, follow color of current element */
+            border: solid currentColor 0.15em;
+            border-radius: 0.15em;
+            width: 5rem;
+            height:5rem;
+            transform: translate(50%, 50%);
+        }
+        form ul li+li {
+            margin-top: 1rem;
+        }
+        /* Styling checked state */
+        input[type="checkbox"] {
+            display: grid;
+            place-content: center; /* Place checked marker easily */
+        }
+        input[type="checkbox"]::before {
+            content: "";
+            width: 4rem;
+            height: 4rem; /* Must be smaller than those of checkbox */
+            transform: scale(0); /* Hidden by default */
+            transform-origin: bottom left;
+            transition: 120ms ease-in-out;
+            background-color: currentColor;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Star */
+        }
+        input[type="checkbox"]:checked::before {
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <ul>
+            <li>
+                <input type="checkbox" id="chicken" name="favoriteFood"
+                value="chicken"> 
+                <label for="chicken">Chicken</label>
+            </li>
+            <li>
+                <input type="checkbox" id="duck" name="favoriteFood"
+                value="duck">
+                <label for="duck">Duck</label>
+            </li>
+        </ul>
+    </form>
+    
+</body>
+</html>
