@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light and Dark Theme</title>
+    <style>
+        :root {
+            font-size: 1.2rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        :root.light {
+            --TEXT-COLOR: #000000;
+            --BACKGROUND-COLOR: #ffffff;
+        }
+
+        :root.dark {
+            --TEXT-COLOR: #ffffff;
+            --BACKGROUND-COLOR: #000000;
+        }
+
+        section {
+            border: solid gray 3px;
+            padding: 2rem;
+            width: 30vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Light and dark styling */
+            color: var(--TEXT-COLOR, #000000); /* Default light theme */
+            background-color: var(--BACKGROUND-COLOR, #ffffff);
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: beige;
+        }
+
+        /* Declarations to apply default theme, following OS preference 
+        :root { 
+            --theme-name: "light"; 
+            --TEXT-COLOR: #000000;
+            --BACKGROUND-COLOR: #ffffff;
+        }
+        @media (prefers-color-scheme: dark) {
+        :root {
+            --theme-name: "dark";
+            --TEXT-COLOR: white;
+            --BACKGROUND-COLOR: #000000;
+        }
+        }
+        */
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>Light and Dark Theme</header>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat,
+        cumque! Nostrum totam incidunt vel alias itaque suscipit culpa harum
+        aliquam a! Iure enim quos perferendis fuga voluptatibus esse dignissimos
+        minus at non explicabo vel, animi optio, laboriosam soluta! Dignissimos
+        asperiores eveniet commodi porro, impedit ratione totam animi iusto
+        omnis odio.</p>
+        <button id="change">Dark Theme</button>
+    </section>
+
+    <script>
+        const changeBtn = document.querySelector("button#change");
+        const root = document.querySelector(":root");
+        changeBtn.addEventListener("click", () => {
+            if (changeBtn.textContent == "Dark Theme") {
+                root.className = "dark";
+                changeBtn.textContent = "Light Theme"
+            }
+            else {
+                root.className = "light";
+                changeBtn.textContent = "Dark Theme";
+            }
+        })
+    </script>
+
+
+    
+</body>
+</html>

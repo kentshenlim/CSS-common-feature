@@ -44,3 +44,7 @@ Dynamic element width, font-size, and padding.
 
 11. <ins>calc() to pick color conveniently, 11_rainbow</ins>  
 Use calc() to pick a given number of colors evenly spaced in the color wheel.  
+
+12. <ins>Light and dark theme, 12_lightDark</ins>  
+A button when clicked will toggle between light and dark theme. Also includes
+applying default theme using media query.  
