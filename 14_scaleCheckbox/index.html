@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalable Checkbox</title>
+    <style>
+        form ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 5rem; /* Change this to observe the effect on size of checkbox*/
+        }
+
+        form li {
+            display: grid;
+            grid-template-columns: 10rem auto; /* 10rem will set the upper limit of side length of checkbox*/
+        }
+        form li * {
+            border: solid red 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <ul>
+            <li>
+                <input type="checkbox" id="chicken" name="favoriteFood"
+                value="chicken"> 
+                <label for="chicken">Chicken</label>
+            </li>
+            <li>
+                <input type="checkbox" id="duck" name="favoriteFood"
+                value="duck">
+                <label for="duck">Duck</label>
+            </li>
+        </ul>
+    </form>
+    
+</body>
+</html>
