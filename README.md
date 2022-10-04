@@ -57,6 +57,6 @@ When font-size increases, checkbox size will also increase. The color is also
 theme-able.  
 
 15. <ins>Form example, 15_form</ins>  
-Following internetingishard. This showcase using media query to set different
+Following internetingishard. This showcases using media query to set different
 alignment for table and computer (big display), float to align radio buttons,
-styling of invalid input, flexbox for central alignment.  
+styling of invalid input, flexbox for central alignment of form.  
