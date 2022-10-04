@@ -10,7 +10,7 @@ Navigation panel with multiple links. The links will enlarge when hover over the
 link. Does not use transform.  
 
 2. <ins>Vertical centering of a line of text, 02_textVerticalCenter</ins>  
-    Vertical centering works for only one line of text but not more.  
+Vertical centering works for only one line of text but not more.  
 
 3. <ins>Dynamic font-size with a minimum, 03_dynamicFontSize</ins>  
 Font-size that increases with viewport width, but with an optimal minimum of
@@ -55,3 +55,8 @@ Accessibility for required field in form, marked with *.
 14. <ins>Checkbox that scales with font-size, 14_themeAbleCheckbox</ins>  
 When font-size increases, checkbox size will also increase. The color is also
 theme-able.  
+
+15. <ins>Form example, 15_form</ins>  
+Following internetingishard. This showcase using media query to set different
+alignment for table and computer (big display), float to align radio buttons,
+styling of invalid input, flexbox for central alignment.  
