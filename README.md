@@ -60,3 +60,6 @@ theme-able.
 Following internetingishard. This showcases using media query to set different
 alignment for table and computer (big display), float to align radio buttons,
 styling of invalid input, flexbox for central alignment of form.  
+
+16. <ins>Wrapping, 16_wrap</ins>  
+Elements wrap automatically depending on screen size.  
